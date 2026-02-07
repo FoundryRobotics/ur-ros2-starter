@@ -1,11 +1,8 @@
 [tasks.calibrate]
 run = """
-ros2 launch ur_robot_driver ur_control.launch.py \
-  ur_type:=ur12e \
-  use_mock_hardware:=true \
-  headless_mode:=true \
+ros2 launch ur_calibration calibration_correction.launch.py \
   robot_ip:=192.168.56.101 \
-  kinematics_params_file:="${PWD}/my_robot_calibration.yaml"
+  target_filename:="${PWD}/my_robot_calibration.yaml"
 """
 
 [tasks.mock_control]

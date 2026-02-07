@@ -37,6 +37,12 @@ In a nutshell this involves turning all network interfaces off, setting up an et
 
 https://docs.universal-robots.com/Universal_Robots_ROS2_Documentation/doc/ur_client_library/doc/setup/network_setup.html
 
+### Disable firewall
+
+```bash
+sudo ufw allow from 192.168.56.101 to 192.168.56.1
+```
+
 ### Start the dev container
 
 - Open this repository with vscode or cursor.
