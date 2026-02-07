@@ -1,4 +1,5 @@
-ARG ROS_DISTRO=rolling
+# rolling, kilted, jazzy
+ARG ROS_DISTRO=kilted
 
 FROM ros:${ROS_DISTRO}-ros-base
 
@@ -28,7 +29,7 @@ RUN apt-get update && \
     apt-get install -y  \
         python3-pip python-is-python3 \
         mise \
-        ros-${ROS_DISTRO}-launch ros-${ROS_DISTRO}-ur && \
+        ros-${ROS_DISTRO}-launch ros-${ROS_DISTRO}-ur ros-${ROS_DISTRO}-ros2-control && \
     apt-get autoremove -y
 
 ENV SHELL="/bin/bash"
